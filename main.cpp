@@ -1,4 +1,14 @@
-void print (const vector <string> Myvector)
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <string>
+using namespace std;
+void readFile(vector <string> Myvector)
+{
+
+}
+void print(vector <string> Myvector)
 {
     for (const auto& line : Myvector)
     {
@@ -13,4 +23,16 @@ void print (const vector <string> Myvector)
         }
         cout<<fline<<endl;
     }
+}
+void writeFile(vector <string> Myvector)
+{
+
+}
+int main()
+{
+    vector <string> Myvector;
+    readFile(Myvector);
+    print(Myvector);
+    writeFile(Myvector);
+    return 0;
 }
