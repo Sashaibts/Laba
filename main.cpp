@@ -1,21 +1,16 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-
-using namespace std;
-
 void print (const vector <string> Myvector)
 {
     for (const auto& line : Myvector)
     {
-        cout<<line<<endl;
+        string fline;
+        for (size_t i=0; i<line.size();++i)
+        {
+            fline += line[i];
+            if (i<line.size()-1 && line[i]!=' ')
+            {
+                fline += ' ';
+            }
+        }
+        cout<<fline<<endl;
     }
-}
-
-int main()
-{
-    vector <string> Myvector;
-    print (Myvector);
-    return 0;
 }
