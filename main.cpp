@@ -26,6 +26,20 @@ void print(vector <string> Myvector)
 }
 void writeFile(vector <string> Myvector)
 {
+    ofstream fileout;
+    fileout.open("textout.txt");
+
+    if (!fileout.is_open())
+    {
+        cout << "Error" << endl;
+    }
+    else
+    {
+        for (const auto& line : Myvector) {
+            fileout << line << endl;
+        }
+    }
+    fileout.close();
 
 }
 int main()
