@@ -6,24 +6,23 @@
 using namespace std;
 void readFile(vector <string> Myvector)
 {
-    string line;
-    ifstream in;
-    in.open("text.txt");
-    if (in.is_open())
-    {
-        while (getline(in, line)) {
-            Myvector.push_back(line);
-        }
-        in.close();
-    }
-    else
-    {
-        cout << "Ошибка открытия файла: "<< endl;
-    }
+
 }
 void print(vector <string> Myvector)
 {
-
+    for (const auto& line : Myvector)
+    {
+        string fline;
+        for (size_t i=0; i<line.size();++i)
+        {
+            fline += line[i];
+            if (i<line.size()-1 && line[i]!=' ')
+            {
+                fline += ' ';
+            }
+        }
+        cout<<fline<<endl;
+    }
 }
 void writeFile(vector <string> Myvector)
 {
@@ -35,6 +34,5 @@ int main()
     readFile(Myvector);
     print(Myvector);
     writeFile(Myvector);
-
     return 0;
 }
